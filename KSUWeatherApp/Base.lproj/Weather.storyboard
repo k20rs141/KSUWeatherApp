@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N9O-ND-aZ6">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather View Controller-->
+        <scene sceneID="6nu-x9-F05">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o0y-lV-IMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="WeatherView" title="Map View Controller" id="N9O-ND-aZ6" userLabel="Weather View Controller" customClass="WeatherViewController" customModule="KSUWeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MGR-Wh-O95"/>
+                        <viewControllerLayoutGuide type="bottom" id="U48-7T-WFw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DX9-Bc-jDv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IcR-SU-MZO">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" placeholder="教室検索（例：203,事務など）" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V5G-r1-Ggu">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="barTintColor" name="TintColor"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="searchField.textColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="searchField.placeholderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </searchBar>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Moy-fI-Pvc" userLabel="Map View">
+                                        <rect key="frame" x="0.0" y="56" width="393" height="672"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="NfK-bH-Zdm">
+                                        <rect key="frame" x="0.0" y="728" width="393" height="32"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <segments>
+                                            <segment title="ROADMAP"/>
+                                            <segment title="HYBRID"/>
+                                            <segment title="SATELLITE"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0f-Qs-UQB" userLabel="Nurse's Office Call Button">
+                                <rect key="frame" x="267" y="738" width="118" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Mea-ch-CIX"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" subtitle=" 092-673-5199">
+                                    <fontDescription key="subtitleFontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="12"/>
+                                    <color key="baseBackgroundColor" name="KsuColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIe-oY-M7p" userLabel="Nurse's Office Map Button">
+                                <rect key="frame" x="267" y="678" width="118" height="56"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="cross.case.fill" catalog="system" title="保健室" subtitle="１号館３階" imagePadding="4" titlePadding="12">
+                                    <fontDescription key="titleFontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="18"/>
+                                    <fontDescription key="subtitleFontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="12"/>
+                                    <color key="baseBackgroundColor" name="KsuColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MyD-x9-o2g" userLabel="Weather View">
+                                <rect key="frame" x="8" y="715" width="105" height="63"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbo-pa-rUL" userLabel="Weather Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="63"/>
+                                        <color key="backgroundColor" name="KsuColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="4" maxY="0.0"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <imageReference key="image" image="cloud" symbolScale="small" variableValue="0.0"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="medium">
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                            </preferredSymbolConfiguration>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="weatherButtonTapped:" destination="N9O-ND-aZ6" eventType="touchUpInside" id="mno-tP-5Wo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="KsuColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="71A-pL-80I"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mbo-pa-rUL" secondAttribute="trailing" id="NYk-fX-uvz"/>
+                                    <constraint firstItem="Mbo-pa-rUL" firstAttribute="top" secondItem="MyD-x9-o2g" secondAttribute="top" id="SWM-6q-k8P"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mbo-pa-rUL" secondAttribute="bottom" id="TFc-52-TOJ"/>
+                                    <constraint firstItem="Mbo-pa-rUL" firstAttribute="leading" secondItem="MyD-x9-o2g" secondAttribute="leading" id="rJX-b6-I92"/>
+                                    <constraint firstAttribute="width" secondItem="MyD-x9-o2g" secondAttribute="height" multiplier="5:3" id="ugU-m9-Q7c"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yZz-oE-eyc"/>
+                        <color key="backgroundColor" name="NavigationBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="U48-7T-WFw" firstAttribute="top" secondItem="s0f-Qs-UQB" secondAttribute="bottom" constant="40" id="6uP-1P-ah4"/>
+                            <constraint firstItem="IcR-SU-MZO" firstAttribute="top" secondItem="MGR-Wh-O95" secondAttribute="bottom" id="8Yu-mR-Nvm"/>
+                            <constraint firstAttribute="trailing" secondItem="IcR-SU-MZO" secondAttribute="trailing" id="909-En-07R"/>
+                            <constraint firstItem="TIe-oY-M7p" firstAttribute="trailing" secondItem="s0f-Qs-UQB" secondAttribute="trailing" id="KaF-Nb-HfR"/>
+                            <constraint firstItem="MyD-x9-o2g" firstAttribute="leading" secondItem="DX9-Bc-jDv" secondAttribute="leading" constant="8" id="YvG-wl-ZY2"/>
+                            <constraint firstItem="U48-7T-WFw" firstAttribute="top" secondItem="MyD-x9-o2g" secondAttribute="bottom" constant="40" id="k7H-tj-Nvn"/>
+                            <constraint firstAttribute="trailing" secondItem="s0f-Qs-UQB" secondAttribute="trailing" constant="8" id="lmU-si-W5a"/>
+                            <constraint firstItem="TIe-oY-M7p" firstAttribute="leading" secondItem="s0f-Qs-UQB" secondAttribute="leading" id="lny-L5-AHT"/>
+                            <constraint firstItem="s0f-Qs-UQB" firstAttribute="top" secondItem="TIe-oY-M7p" secondAttribute="bottom" constant="4" id="nUB-9Y-Dx0"/>
+                            <constraint firstItem="IcR-SU-MZO" firstAttribute="leading" secondItem="DX9-Bc-jDv" secondAttribute="leading" id="q81-oN-m9b"/>
+                            <constraint firstItem="U48-7T-WFw" firstAttribute="top" secondItem="IcR-SU-MZO" secondAttribute="bottom" id="vCC-qa-SSW"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="MapIcon" id="Js5-ll-hxl"/>
+                    <navigationItem key="navigationItem" title="Map" id="3pw-pW-UXc">
+                        <barButtonItem key="rightBarButtonItem" image="list.dash" catalog="system" id="SZK-Mn-TcE"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="weatherButton" destination="Mbo-pa-rUL" id="TQ5-6E-3qX"/>
+                        <outlet property="weatherView" destination="MyD-x9-o2g" id="Qx0-6d-Bug"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-835" y="-1955"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MapIcon" width="26" height="21"/>
+        <image name="cloud" width="12" height="8"/>
+        <image name="cross.case.fill" catalog="system" width="128" height="100"/>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <namedColor name="KsuColor">
+            <color red="0.54509803921568623" green="0.13333333333333333" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NavigationBackgroundColor">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TintColor">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
