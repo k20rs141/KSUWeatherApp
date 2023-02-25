@@ -86,7 +86,7 @@ struct WeatherView: View {
                             HStack {
                                 VStack {
                                     Text(Date().formatAsToday())
-                                        .font(.title3)
+                                        .font(.system(size: screen.width * 0.06))
                                         .padding(.bottom, screen.height * 0.006)
                                     Text("九州産業大学")
                                         .font(.system(size: screen.width * 0.08))
@@ -180,6 +180,7 @@ struct HourlyForcastView: View {
             }
         }
         .frame(maxHeight: screen.height * 0.22)
+        .font(.system(size: 17))
         .background(colorScheme == .dark ? Color(red: 0.11, green: 0.12, blue: 0.27) : Color(red: 0.95, green: 0.95, blue: 0.95))
         .foregroundColor(colorScheme == .dark ? .white : Color(red: 0.247, green: 0.247, blue: 0.247))
         .clipShape(RoundedRectangle(cornerRadius: 10.0, style: .continuous))
@@ -208,13 +209,13 @@ struct TenDayForcastView: View {
                             .frame(width: screen.height * 0.04, height: screen.height * 0.04)
                         Spacer()
                         Text("\(Int(dailyWeather.highTemperature.value.rounded()))°")
-                            .frame(width: 40, alignment: .leading)
+                            .frame(width: 40, alignment: .trailing)
                             .foregroundColor(Color.orange)
                         Text("\(Int(dailyWeather.lowTemperature.value.rounded()))°")
-                            .frame(width: 40, alignment: .leading)
+                            .frame(width: 40, alignment: .trailing)
                             .foregroundColor(Color.blue)
                         Text("\(Int(rainyPercent * 10))%")
-                            .frame(width: 45, alignment: .trailing)
+                            .frame(width: 48, alignment: .trailing)
                     }
                     .padding(.horizontal, 30)
                     .frame(height: 45)
@@ -223,6 +224,7 @@ struct TenDayForcastView: View {
             }
         }
         .frame(maxHeight: screen.height * 0.47)
+        .font(.system(size: 17))
         .background(colorScheme == .dark ? Color(red: 0.11, green: 0.12, blue: 0.27) : Color(red: 0.95, green: 0.95, blue: 0.95))
         .clipShape(RoundedRectangle(cornerRadius: 15.0, style: .continuous))
     }
