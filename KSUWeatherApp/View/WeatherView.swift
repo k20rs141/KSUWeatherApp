@@ -248,12 +248,10 @@ struct AppleAttribution: View {
                         ProgressView()
                     }
                     // 天気のデータソースへの法的リンク
-                    if let url = attribution.legalPageURL {
-                        Link("天気のデータソース", destination: url)
-                            .foregroundColor(colorScheme == .dark ? .white : .black)
-                            .font(.system(size: 8))
-                            .offset(y: 1)
-                    }
+                    Link("天気のデータソース", destination: attribution.legalPageURL)
+                        .foregroundColor(colorScheme == .dark ? .white : .black)
+                        .font(.system(size: 8))
+                        .offset(y: 1)
                 }
             }
         }
