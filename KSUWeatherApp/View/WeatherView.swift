@@ -180,10 +180,8 @@ struct HourlyForcastView: View {
             }
         }
         .frame(maxHeight: screen.height * 0.22)
-        .font(.system(size: 17))
-        .background(colorScheme == .dark ? Color(red: 0.11, green: 0.12, blue: 0.27) : Color(red: 0.95, green: 0.95, blue: 0.95))
         .foregroundColor(colorScheme == .dark ? .white : Color(red: 0.247, green: 0.247, blue: 0.247))
-        .clipShape(RoundedRectangle(cornerRadius: 10.0, style: .continuous))
+        .cardStyle(appearanceMode: colorScheme, cornerRadius: 10)
     }
 }
 
@@ -224,9 +222,7 @@ struct TenDayForcastView: View {
             }
         }
         .frame(maxHeight: screen.height * 0.47)
-        .font(.system(size: 17))
-        .background(colorScheme == .dark ? Color(red: 0.11, green: 0.12, blue: 0.27) : Color(red: 0.95, green: 0.95, blue: 0.95))
-        .clipShape(RoundedRectangle(cornerRadius: 15.0, style: .continuous))
+        .cardStyle(appearanceMode: colorScheme, cornerRadius: 15)
     }
 }
 
