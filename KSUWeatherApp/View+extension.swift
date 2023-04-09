@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 
 extension View {
     func cardStyle(appearanceMode: ColorScheme, cornerRadius: CGFloat) -> some View {
