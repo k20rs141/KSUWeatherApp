@@ -20,9 +20,9 @@ iOS16で新たに登場したWeatherKitを使用
 
 ## 開発環境
 
-- Xcode Version 14.2 or later
-- iOS 16.2 or later 
-- Swift 5.7
+- Xcode Version 14.3 or later
+- iOS 16.4 or later 
+- Swift 5.8
 - SwiftUI 4.0
 
 
