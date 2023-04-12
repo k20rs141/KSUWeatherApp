@@ -13,7 +13,7 @@ struct WeatherView: View {
         if let hourlyWeather = weatherModel.weather?.hourlyForecast {
             return Array(hourlyWeather.filter { hourlyWeather in
                 // timeIntervalSinceで取得した日付と比較
-                hourlyWeather.date.timeIntervalSince(Date()) >= 0
+                hourlyWeather.date.timeIntervalSince(Date()) <= 0
             }.prefix(24))
         } else {
             return []
